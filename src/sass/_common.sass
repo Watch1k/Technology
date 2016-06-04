@@ -25,6 +25,9 @@ $dark: #20201e
 $light: #f1f0ef
 $white: #ffffff
 
+=text-shadow
+	text-shadow: #ca302f 1px 1px, #ca302f 2px 2px, #ca302f 3px 3px, #ca302f 4px 4px, #ca302f 5px 5px, #ca302f 6px 6px, #ca302f 7px 7px, #ca302f 8px 8px, #ca302f 9px 9px, #ca302f 10px 10px, #ca302f 11px 11px, #ca302f 12px 12px, #ca302f 13px 13px, #ca302f 14px 14px, #ca302f 15px 15px, #ca302f 16px 16px, #ca302f 17px 17px, #ca302f 18px 18px, #ca302f 19px 19px, #ca302f 20px 20px, #ca302f 21px 21px, #ca302f 22px 22px, #ca302f 23px 23px, #ca302f 24px 24px, #ca302f 25px 25px, #ca302f 26px 26px, #ca302f 27px 27px, #ca302f 28px 28px, #ca302f 29px 29px, #ca302f 30px 30px, #ca302f 31px 31px, #ca302f 32px 32px, #ca302f 33px 33px, #ca302f 34px 34px, #ca302f 35px 35px, #ca302f 36px 36px, #ca302f 37px 37px, #ca302f 38px 38px, #ca302f 39px 39px, #ca302f 40px 40px, #ca302f 41px 41px, #ca302f 42px 42px, #ca302f 43px 43px, #ca302f 44px 44px, #ca302f 45px 45px, #ca302f 46px 46px, #ca302f 47px 47px, #ca302f 48px 48px, #ca302f 49px 49px, #ca302f 50px 50px, #ca302f 51px 51px, #ca302f 52px 52px, #ca302f 53px 53px, #ca302f 54px 54px, #ca302f 55px 55px, #ca302f 56px 56px, #ca302f 57px 57px, #ca302f 58px 58px, #ca302f 59px 59px, #ca302f 60px 60px, #ca302f 61px 61px, #ca302f 62px 62px, #ca302f 63px 63px, #ca302f 64px 64px, #ca302f 65px 65px, #ca302f 66px 66px, #ca302f 67px 67px, #ca302f 68px 68px, #ca302f 69px 69px, #ca302f 70px 70px, #ca302f 71px 71px, #ca302f 72px 72px, #ca302f 73px 73px, #ca302f 74px 74px, #ca302f 75px 75px, #ca302f 76px 76px, #ca302f 77px 77px, #ca302f 78px 78px, #ca302f 79px 79px, #ca302f 80px 80px, #ca302f 81px 81px, #ca302f 82px 82px, #ca302f 83px 83px, #ca302f 84px 84px, #ca302f 85px 85px, #ca302f 86px 86px, #ca302f 87px 87px, #ca302f 88px 88px, #ca302f 89px 89px, #ca302f 90px 90px, #ca302f 91px 91px, #ca302f 92px 92px, #ca302f 93px 93px, #ca302f 94px 94px, #ca302f 95px 95px, #ca302f 96px 96px, #ca302f 97px 97px, #ca302f 98px 98px, #ca302f 99px 99px, #ca302f 100px 100px
+
 /* ==========================================================================
 	 Main Styles
 	 ========================================================================== */
@@ -261,6 +264,8 @@ body
 	text-transform: uppercase
 	text-align: center
 	+span(full)
+	&__in
+		display: block
 .section
 	padding-top: 50px
 	padding-bottom: 50px
@@ -348,13 +353,224 @@ body
 .section_2
 	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
 .description
+	margin-bottom: 50px
 	+pie-clearfix
 	&__col
 		+span(6)
 	&__title
+		margin-bottom: 20px
 		+calibri-b
 		font-size: 24px
 		line-height: 28px
+		font-weight: normal
+	&__list
+		+pre(gutter(6))
+		list-style-type: disc
+	&__item
+		margin-bottom: 5px
+		color: #e13534
+		list-style-type: disc
+		p
+			color: #343c44
+.selection
+	+pie-clearfix
+	&__desc
+		margin-top: 15px
+		+calibri-b
+		font-size: 20px
+		color: #2d3039
+		line-height: 24px
+	&__item
+		color: #ffffff
+		line-height: 1
+		text-align: center
+		+span(3)
+		&:nth-child(2)
+			.selection__hexagon-content
+				&:before
+					content: '90+'
+				&:after
+					content: 'обьектов'
+		&:nth-child(3)
+			.selection__hexagon-content
+				&:before
+					content: '120+'
+				&:after
+					content: 'профессион.'
+					left: -28%
+		&:nth-child(4)
+			.selection__hexagon-content
+				&:before
+					content: '100 %'
+				&:after
+					content: 'гарантия'
+					left: -19.5%
+	&__hexagon
+		overflow: hidden
+		display: inline-block
+		width: 13em
+		height: 11.258em
+		transform: rotate(-30deg) skewX(30deg)
+		border-radius: 1.25em
+		*,
+		*:before
+			display: block
+			overflow: hidden
+			width: inherit
+			height: inherit
+			border-radius: inherit
+		&:before
+			transform: skewX(-30deg) rotate(60deg) skewX(30deg)
+		&-inner
+			transform: skewX(-30deg) rotate(60deg) skewX(30deg)
+			&:before
+				content: ''
+				background: #e13534
+				transform: skewX(-30deg) rotate(60deg) skewX(30deg)
+		&-content
+			margin-top: -11.258em
+			position: relative
+			transform: skewX(-30deg) rotate(60deg) skewX(30deg)
+			&:before,
+			&:after
+				position: absolute
+				z-index: 1
+				left: -8%
+				top: -94%
+				content: '12 лет'
+				height: 13em
+				transform: skewX(-30deg) rotate(-90deg)
+				+calibri-b
+				line-height: 520px
+				font-size: 40px
+				color: #ffffff
+				text-align: center
+				+text-shadow
+			&:after
+				content: 'на рынке'
+				z-index: 2
+				top: -29%
+				left: -20%
+				font-size: 22px
+				line-height: 520px
+	&__name
+		position: absolute
+		top: 10px
+		left: 0
+		right: 0
+		z-index: 1
+		+calibri-b
+		font-size: 40px
+		+text-shadow
+	&__subname
+		position: absolute
+		top: 70px
+		left: 0
+		right: 0
+		z-index: 1
+		font-size: 22px
+		+text-shadow
+.section_3
+	position: relative
+	background-color: $light
+	&:before
+		content: ''
+		position: absolute
+		z-index: 1
+		margin-top: -15px
+		margin-left: -18px
+		top: 0
+		left: 50%
+		+arr(15,15,$light,br)
+	&:after
+		content: ''
+		position: absolute
+		z-index: 1
+		margin-top: -15px
+		margin-left: 2px
+		top: 0
+		left: 50%
+		+arr(15,15,$light,bl)
+.five
+	+pie-clearfix
+	&__col
+		text-align: right
+		+span(5)
+		&:nth-child(1)
+			padding-right: 0
+		&:nth-child(2)
+			text-align: center
+			+span(2)
+		&:nth-child(3)
+			text-align: left
+			+span(5)
+			padding-left: 0
+	&__title
+		margin-bottom: 50px
+		+calibri-b
+		font-size: 36px
+		color: #e13534
+		line-height: 1
+		text-transform: uppercase
+		font-weight: normal
+		&_mod
+			display: block
+			margin-top: 5px
+			font-size: 24px
+			color: #343c44
+	&__item
+		height: 167px
+		font-size: 14px
+		line-height: 20px
+	&__desc
+		+sans-b
+		text-transform: uppercase
+	&__text
+		+sans
+		color: #84888d
+	&__el
+		position: relative
+		display: inline-block
+		width: 65px
+		height: 70px
+		background: url('../img/backgrounds/hex.png') center center no-repeat
+		color: #e13534
+		font-size: 30px
+		line-height: 74px
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			margin-top: 13px
+			left: 50%
+			margin-left: -3px
+			width: 5px
+			height: 65px
+			background: url('../img/backgrounds/dots.png') center center no-repeat
+	.row
+		margin-top: 120px
+		& + .row
+			margin-top: 95px
+			.five__el
+		&:last-child
+			.five__el
+				&:after
+					margin-top: 0
+					background: url('../img/backgrounds/bg-3.png') center center repeat
+					height: 300px
+		&:first-child
+			.five__el
+				&:before
+					content: ''
+					position: absolute
+					left: 50%
+					margin-left: -3px
+					top: -300px
+					height: 300px
+					width: 5px
+					background: url('../img/backgrounds/bg-3.png') center center repeat
+
+
 
 /* ==========================================================================
 	 Other Styles
