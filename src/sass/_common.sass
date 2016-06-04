@@ -99,8 +99,8 @@ body
 			&:hover
 				text-decoration: underline
 	&-mid
-		padding-top: 45px
-		padding-bottom: 45px
+		padding-top: 50px
+		padding-bottom: 50px
 		+calibri-l
 		font-size: 16px
 		background-color: $light
@@ -252,7 +252,7 @@ body
 	 Main
 	 ========================================================================== */
 .title
-	margin-bottom: 45px
+	margin-bottom: 50px
 	+calibri-b
 	font-size: 36px
 	color: $dark
@@ -262,27 +262,29 @@ body
 	text-align: center
 	+span(full)
 .section
-	padding-top: 45px
-	padding-bottom: 45px
-	&_1
-		background: url('../img/backgrounds/bg-1.jpg')
-		+cover
-		.title
-			font-size: 40px
-			color: $white
-			text-align: left
+	padding-top: 50px
+	padding-bottom: 50px
+.section_1
+	background: url('../img/backgrounds/bg-1.jpg')
+	+cover
+	.title
+		font-size: 40px
+		color: $white
+		text-align: left
 .form
 	+span(9)
 	+pre(3)
 	&-wrap
 		padding-top: 25px
 		padding-bottom: 25px
-		background: $light url('../img/backgrounds/bg-2.png') -115px 0 no-repeat
+		background: $light url('../img/backgrounds/bg-2.png') -100px 0 no-repeat
 		background-size: auto 120%
 		border-radius: 10px
+		+pre(gutter())
+		+post(gutter())
 		+pie-clearfix
 	&-title
-		margin-bottom: 45px
+		margin-bottom: 25px
 		+sans
 		font-size: 18px
 		color: #1e242a
@@ -300,6 +302,8 @@ body
 			position: absolute
 			left: 15px
 			top: 15px
+			&.icon-phone
+				top: 14px
 	&__input
 		width: 100%
 		padding-left: 40px
@@ -341,7 +345,16 @@ body
 		&:hover
 			background-color: darken(#dd2530,5)
 			transition: all 0.3s
-
+.section_2
+	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
+.description
+	+pie-clearfix
+	&__col
+		+span(6)
+	&__title
+		+calibri-b
+		font-size: 24px
+		line-height: 28px
 
 /* ==========================================================================
 	 Other Styles
