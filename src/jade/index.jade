@@ -1,0 +1,28 @@
+extend includes/_layout
+block title
+	title Technology
+block content
+	// begin section_1
+	section.section.section_1
+		.wrap
+			.row
+				h2.title.
+					Перевод жилых помещений в нежилой фонд от 3 месяцев, без посредников и переплат
+
+			.form-wrap
+				p.form-title <span class="form-title_mod">Заказать бесплатную консультацию</span> нашего специалиста
+
+				// begin form
+				form(action='#').form
+					.form__field
+						label(for='formUser')
+							.icon.icon-user
+						input(type='text' placeholder='Ваше имя' id='formUser').form__input
+					.form__field
+						label(for='formPhone')
+							.icon.icon-phone
+						input(type='text' placeholder='Ваш телефон' id='formPhone').form__input
+					.form__field
+						button(type='submit').form__submit Отправить
+				// end form
+	// end section_1

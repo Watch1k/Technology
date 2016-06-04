@@ -1,0 +1,93 @@
+block navToggle
+	-var headToggle = ''
+-var headMenu = ['О компании', 'Акции', 'Отзывы', 'Видео', 'Новости', 'Полезное', 'Контакты', 'Соискателям']
+header.header
+	// begin header-top
+	.header-top
+		.wrap
+			// begin main-nav
+			nav.nav
+				ul.nav__list
+					-var i = 0
+					each value in headMenu
+						if headToggle === value
+							li.nav__item.is-active
+								a(href='javascript: void(0)' title=value).nav__link= value
+						else
+							li.nav__item
+								a(href='javascript: void(0)' title=value).nav__link= value
+			// end main-nav
+
+			// begin header-links
+			ul.header-links
+				li.header-links__item
+					a(href='javascript: void(0)' title=value).header-links__link Бухгалтерия
+				li.header-links__item
+					a(href='javascript: void(0)' title=value).header-links__link Оценка
+				li.header-links__item
+					a(href='javascript: void(0)' title=value).header-links__link Экспертиза
+				li.header-links__item
+					| Регистрация&nbsp;
+					a(href='javascript: void(0)' title=value).header-links__link ООП
+					| &nbsp;и&nbsp;
+					a(href='javascript: void(0)' title=value).header-links__link ИП
+			// end header-links
+	// end header-top
+
+	// begin header-mid
+	.header-mid
+		.wrap
+			// begin logo
+			h1.logo.header-mid__col
+				a(href="index.html").logo__link Технология управления
+			// end logo
+
+			// begin location
+			.location.header-mid__col
+				.row
+					.location__country Ваш город:&nbsp;
+						select.location__select
+							option.location__value Выбрать
+							option.location__value Москва
+							option.location__value Санкт-Петербург
+
+				p.location__text.
+					Самара, Московское шоссе, д.3
+					<br>
+					офисы: 301, 304, 307, 309
+
+				.row
+					a(href='javascript: void(0)' title='map').location__link Посмотреть все офисы на карте
+			// end location
+
+			// begin header-contacts
+			.header-contacts.header-mid__col
+				.row
+					a(href='tel:7-846-27-67-888').header-contacts__phone +7(846) 27-67-888
+				.row
+					a(href='mailto:grand-ocenka@mail.ru').header-contacts__mail grand-ocenka@mail.ru
+				.row
+					a(href='mailto:zakaz-ocenka@mail.ru').header-contacts__mail zakaz-ocenka@mail.ru
+			// end header-contacts
+
+			// begin header-buttons
+			.header-buttons.header-mid__col
+				button.header__btn.header__btn_red Заказать звонок
+				button.header__btn.header__btn_grey Задать вопрос
+			// end header-buttons
+	// end header-mid
+
+	// begin header-bot
+	.header-bot
+		.wrap
+			ul.header-bot-links
+				li.header-bot-links__item
+					a(href='javascript: void(0)').header-bot-links__link Услуги для юридических лиц
+				li.header-bot-links__item
+					a(href='javascript: void(0)').header-bot-links__link Услуги для физических лиц
+				li.header-bot-links__item
+					a(href='javascript: void(0)').header-bot-links__link Тарифы на услуги
+
+	// end header-bot
+
+
