@@ -1,16 +1,24 @@
 block footToggle
-  -var footToggle = ''
--var footMenu = ['Menu 1', 'Menu 2', 'Menu 3', 'Menu 4']
-//footer.footer
-  .wrap
-    span.copyright &copy; Template
-    nav
-      .foot-nav
-        ul
-          each value in footMenu
-            if footToggle === value
-              li.is-active
-                a(href='#')= value
-            else
-              li
-                a(href='#')= value
+footer.footer
+	.wrap
+		.footer__col
+			span.footer__copyright &copy; 2016 ООО «Название». Все права защищены
+		.footer__col
+			ul.socials
+				li.socials__item
+					a(href='javascript: void(0)').socials__link
+						+icon('twitter')
+				li.socials__item
+					a(href='javascript: void(0)').socials__link
+						+icon('facebook')
+				li.socials__item
+					a(href='javascript: void(0)').socials__link
+						+icon('vkontakte')
+				li.socials__item
+					a(href='javascript: void(0)').socials__link
+						+icon('linkedin')
+		.footer__col
+			.author
+				span.author__text Создано в
+				a(href='javascript: void(0)').author__link
+					img(src='img/logo-2.png' title='logo').author__logo

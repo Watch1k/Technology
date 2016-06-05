@@ -80,8 +80,8 @@ gulp.task('sass', function() {
 
     return streamqueue({ objectMode: true },
         sass('src/sass/*.sass', {
-            sourcemap: true,
-            style: 'nested'
+            // sourcemap: true,
+            style: 'compact'
         })
             .on('error', function(err) {
                 console.error('Error', err.message);

@@ -165,7 +165,8 @@ block content
 	// begin section_4
 	section.section.section_4
 		.wrap
-			h2.title Наши услуги
+			.row
+				h2.title Наши услуги
 			ul.services
 				li.services__item
 					.services__img
@@ -205,7 +206,7 @@ block content
 	section.section.section_5
 		.wrap
 			.form-wrap
-				p.form-title <span class="form-title_mod">Узнайте,</span> можете ли вы перевести ваш жилой объект в нежилой
+				h3.form-title <span class="form-title_mod">Узнайте,</span> можете ли вы перевести ваш жилой объект в нежилой
 
 				// begin form
 				form(action='#').form
@@ -225,50 +226,207 @@ block content
 	// begin section_6
 	section.section.section_6
 		.wrap
-			h2.title Наши объекты
+			.row
+				h2.title Наши объекты
 			ul.objects
 				li.objects__item
 					a(href='img/content/img-big_1.jpg' title='Магазин разливных напитков на ул. Ленинской д.168' data-fancybox-group='gallery').objects__el
 						img(src='img/content/img-small_1.jpg' alt='img').objects__img
 						.objects__overlay
 							.icon.icon-loop
-					.obects__desc.
+							.icon-hover.icon-loop-hover
+					.objects__desc.
 						Магазин разливных напитков на ул. Ленинской д.168
 					.row
 						button.objects__comment Отзыв клиента
 				li.objects__item
 					a(href='img/content/img-big_2.jpg' title='Магазин разливных напитков на ул. Ленинской д.168' data-fancybox-group='gallery').objects__el
 						img(src='img/content/img-small_2.jpg' alt='img').objects__img
-					.obects__desc.
+						.objects__overlay
+							.icon.icon-loop
+							.icon-hover.icon-loop-hover
+					.objects__desc.
 						Магазин разливных напитков на ул. Ленинской д.168
 					.row
 						button.objects__comment Отзыв клиента
 				li.objects__item
 					a(href='img/content/img-big_3.jpg' title='Магазин разливных напитков на ул. Ленинской д.168' data-fancybox-group='gallery').objects__el
 						img(src='img/content/img-small_3.jpg' alt='img').objects__img
-					.obects__desc.
+						.objects__overlay
+							.icon.icon-loop
+							.icon-hover.icon-loop-hover
+					.objects__desc.
 						Магазин разливных напитков на ул. Ленинской д.168
 					.row
 						button.objects__comment Отзыв клиента
 				li.objects__item
 					a(href='img/content/img-big_4.jpg' title='Магазин разливных напитков на ул. Ленинской д.168' data-fancybox-group='gallery').objects__el
 						img(src='img/content/img-small_4.jpg' alt='img').objects__img
-					.obects__desc.
+						.objects__overlay
+							.icon.icon-loop
+							.icon-hover.icon-loop-hover
+					.objects__desc.
 						Магазин разливных напитков на ул. Ленинской д.168
 					.row
 						button.objects__comment Отзыв клиента
 				li.objects__item
 					a(href='img/content/img-big_5.jpg' title='Магазин разливных напитков на ул. Ленинской д.168' data-fancybox-group='gallery').objects__el
 						img(src='img/content/img-small_5.jpg' alt='img').objects__img
-					.obects__desc.
+						.objects__overlay
+							.icon.icon-loop
+							.icon-hover.icon-loop-hover
+					.objects__desc.
 						Магазин разливных напитков на ул. Ленинской д.168
 					.row
 						button.objects__comment Отзыв клиента
 				li.objects__item
 					a(href='img/content/img-big_6.jpg' title='Магазин разливных напитков на ул. Ленинской д.168' data-fancybox-group='gallery').objects__el
 						img(src='img/content/img-small_6.jpg' alt='img').objects__img
-					.obects__desc.
+						.objects__overlay
+							.icon.icon-loop
+							.icon-hover.icon-loop-hover
+					.objects__desc.
 						Магазин разливных напитков на ул. Ленинской д.168
 					.row
 						button.objects__comment Отзыв клиента
 	// end section_6
+
+	// begin section_7
+	section.section.section_7
+		.wrap
+			.row
+				h2.title Стоимость и сроки
+			.row
+				// begin table-price
+				.table-price
+					.table-price__thead
+						.table-price__row
+							.table-price__td.is-active <i class="icon icon-arrow"></i> Название услуги
+							.table-price__td <i class="icon icon-arrow"></i> Срок
+							.table-price__td <i class="icon icon-arrow"></i> Цена
+					.table-price__tbody
+						.table-price__row
+							.table-price__td Перевод помещений из жилых в нежилые под коммерческие нужды
+							.table-price__td 4 месяца
+							.table-price__td от 60000 рублей
+						.table-price__row
+							.table-price__td Перевод помещений из жилых в нежилые под коммерческие нужды
+							.table-price__td 4 месяца
+							.table-price__td от 60000 рублей
+				// end table-price
+	// end section_7
+
+	// begin section_8
+	section.section.section_8
+		.wrap
+			.row
+				h2.title Наши эксперты
+			.row
+				// begin slider
+				.slider
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+					.slider__item
+						img(src='img/content/photo-1.png' alt='photo').slider__img
+						.slider__name Зарифова Ирина Искандаровна
+						.slider__desc юрист, стаж с 2002 года
+				// end slider
+	// end section_8
+
+	// begin section_9
+	section.section.section_9
+		.wrap
+			.row
+					h2.title Часто задаваемые вопросы
+			.row
+				// begin faq
+				ul.faq
+					li.faq__item
+						.faq__question
+							.faq__question-icon Вопрос:
+							.faq__question-text.
+								Организация хочет открыть магазин на первом этаже жилого многоквартирного дома. Вход в магазин будет находиться в том же подъезде, что и входы в квартиры граждан. Правомерно ли данное размещение магазина?
+						.faq__question.faq__question_mod
+							.faq__question-icon Ответ
+							.faq__question-text.
+								Организация хочет открыть магазин на первом этаже жилого многоквартирного дома. Вход в магазин будет находиться в том же подъезде, что и входы в квартиры граждан. Правомерно ли данное размещение магазина?
+					li.faq__item
+						.faq__question
+							.faq__question-icon Вопрос:
+							.faq__question-text.
+								Организация хочет открыть магазин на первом этаже жилого многоквартирного дома. Вход в магазин будет находиться в том же подъезде, что и входы в квартиры граждан. Правомерно ли данное размещение магазина?
+						.faq__question.faq__question_mod
+							.faq__question-icon Ответ
+							.faq__question-text.
+								Организация хочет открыть магазин на первом этаже жилого многоквартирного дома. Вход в магазин будет находиться в том же подъезде, что и входы в квартиры граждан. Правомерно ли данное размещение магазина?
+				// end faq
+			.text-center
+				button.more-btn Показать ещё
+	// end section_9
+
+	// begin section_10
+	section.section.section_10
+		.wrap
+			.row
+				h3.title Остались вопросы?
+				h3.subtitle Задайте их нам, мы рады ответить Вам
+			// begin contacts
+			ul.contacts
+				li.contacts__item
+					a(href='tel:7-846-123-34-45').contacts__link
+						i.icon.icon-1
+						i.icon.icon_hover.icon-1-hover
+						p.contacts__text
+							span.contacts__text-in +7 (846) 123-34-45
+				li.contacts__item
+					a(href='javascript: void(0)').contacts__link
+						i.icon.icon-2
+						i.icon.icon_hover.icon-2-hover
+						p.contacts__text
+							span.contacts__text-in Закажите звонок
+				li.contacts__item
+					a(href='javascript: void(0)').contacts__link
+						i.icon.icon-3
+						i.icon.icon_hover.icon-3-hover
+						p.contacts__text
+							span.contacts__text-in Работаем Пн-Пт с 9:00 до 18:00
+				li.contacts__item
+					a(href='javascript: void(0)').contacts__link
+						i.icon.icon-4
+						i.icon.icon_hover.icon-4-hover
+						p.contacts__text
+							span.contacts__text-in Самара, Московское шоссе, д.3<br> офисы: 301, 302, 304, 309
+				li.contacts__item
+					a(href='mailto:grand-ocenka@mail.ru').contacts__link
+						i.icon.icon-5
+						i.icon.icon_hover.icon-5-hover
+						p.contacts__text
+							span.contacts__text-in grand-ocenka@mail.ru
+			// end contacts
+	// end section_10

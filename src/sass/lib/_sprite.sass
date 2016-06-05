@@ -1,12 +1,23 @@
 $icons: (0:0)
-$icons: map-merge($icons,(act: (X: -178px, Y:0px, W: 48px, H: 50px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(copy: (X: -178px, Y:-54px, W: 48px, H: 50px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(doc: (X: 0px, Y:-149px, W: 48px, H: 50px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(loop-hover: (X: 0px, Y:0px, W: 85px, H: 92px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(loop: (X: -89px, Y:0px, W: 85px, H: 92px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(msg: (X: 0px, Y:-96px, W: 53px, H: 49px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(phone: (X: -178px, Y:-108px, W: 16px, H: 15px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(user: (X: -198px, Y:-108px, W: 12px, H: 13px, TW: 226px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(1-hover: (X: -52px, Y:-149px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(1: (X: -135px, Y:-96px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(2-hover: (X: -91px, Y:-149px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(2: (X: -130px, Y:-149px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(3-hover: (X: -169px, Y:-149px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(3: (X: -230px, Y:0px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(4-hover: (X: -230px, Y:-39px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(4: (X: -57px, Y:-96px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(5-hover: (X: -96px, Y:-96px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(5: (X: -178px, Y:-108px, W: 35px, H: 35px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(act: (X: -178px, Y:0px, W: 48px, H: 50px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arrow: (X: -230px, Y:-97px, W: 7px, H: 5px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(copy: (X: -178px, Y:-54px, W: 48px, H: 50px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(doc: (X: 0px, Y:-149px, W: 48px, H: 50px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(loop-hover: (X: 0px, Y:0px, W: 85px, H: 92px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(loop: (X: -89px, Y:0px, W: 85px, H: 92px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(msg: (X: 0px, Y:-96px, W: 53px, H: 49px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(phone: (X: -230px, Y:-78px, W: 16px, H: 15px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(user: (X: -250px, Y:-78px, W: 12px, H: 13px, TW: 265px, TH: 199px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -48,51 +59,117 @@ $icons: map-merge($icons,(user: (X: -198px, Y:-108px, W: 12px, H: 13px, TW: 226p
 @mixin spr($i)
 	+sprite-position-retina($i)
 
+.icon-1-hover
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -52px -149px
+	background-size: 265px 199px
+.icon-1
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -135px -96px
+	background-size: 265px 199px
+.icon-2-hover
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -91px -149px
+	background-size: 265px 199px
+.icon-2
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -130px -149px
+	background-size: 265px 199px
+.icon-3-hover
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -169px -149px
+	background-size: 265px 199px
+.icon-3
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -230px 0px
+	background-size: 265px 199px
+.icon-4-hover
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -230px -39px
+	background-size: 265px 199px
+.icon-4
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -57px -96px
+	background-size: 265px 199px
+.icon-5-hover
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -96px -96px
+	background-size: 265px 199px
+.icon-5
+	width: 35px
+	height: 35px
+	background-image: url('../img/icons.png')
+	background-position: -178px -108px
+	background-size: 265px 199px
 .icon-act
 	width: 48px
 	height: 50px
 	background-image: url('../img/icons.png')
 	background-position: -178px 0px
-	background-size: 226px 199px
+	background-size: 265px 199px
+.icon-arrow
+	width: 7px
+	height: 5px
+	background-image: url('../img/icons.png')
+	background-position: -230px -97px
+	background-size: 265px 199px
 .icon-copy
 	width: 48px
 	height: 50px
 	background-image: url('../img/icons.png')
 	background-position: -178px -54px
-	background-size: 226px 199px
+	background-size: 265px 199px
 .icon-doc
 	width: 48px
 	height: 50px
 	background-image: url('../img/icons.png')
 	background-position: 0px -149px
-	background-size: 226px 199px
+	background-size: 265px 199px
 .icon-loop-hover
 	width: 85px
 	height: 92px
 	background-image: url('../img/icons.png')
 	background-position: 0px 0px
-	background-size: 226px 199px
+	background-size: 265px 199px
 .icon-loop
 	width: 85px
 	height: 92px
 	background-image: url('../img/icons.png')
 	background-position: -89px 0px
-	background-size: 226px 199px
+	background-size: 265px 199px
 .icon-msg
 	width: 53px
 	height: 49px
 	background-image: url('../img/icons.png')
 	background-position: 0px -96px
-	background-size: 226px 199px
+	background-size: 265px 199px
 .icon-phone
 	width: 16px
 	height: 15px
 	background-image: url('../img/icons.png')
-	background-position: -178px -108px
-	background-size: 226px 199px
+	background-position: -230px -78px
+	background-size: 265px 199px
 .icon-user
 	width: 12px
 	height: 13px
 	background-image: url('../img/icons.png')
-	background-position: -198px -108px
-	background-size: 226px 199px
+	background-position: -250px -78px
+	background-size: 265px 199px

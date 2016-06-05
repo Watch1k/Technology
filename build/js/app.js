@@ -2043,14 +2043,35 @@ $(document).ready(function(){
 		});
 	}());
 
-	$('.location__select').selectric();
+	(function () {
+		$('.location__select').selectric();
+	}());
 
-	$('.objects__el').fancybox({
-		helpers: {
-			overlay: {
-				locked: false
+	(function () {
+		$('.objects__el').fancybox({
+			padding: 3,
+			helpers: {
+				overlay: {
+					locked: false
+				}
 			}
-		}
-	});
+		});
+	}());
+
+	(function () {
+		$('.slider').owlCarousel({
+			stagePadding: 25,
+			dots: true,
+			arrows: true,
+			margin: 60,
+			loop: true,
+			items: 3,
+			nav: true,
+			navText: [
+				'<svg class="icon icon-move"><use xlink:href="img/icons.svg#icon-move"></use></svg>',
+				'<svg class="icon icon-move"><use xlink:href="img/icons.svg#icon-move"></use></svg>'
+			]
+		});
+	}());
 
 });

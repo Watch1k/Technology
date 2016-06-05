@@ -58,7 +58,6 @@ body
 	overflow: hidden
 	margin: 0 auto
 	min-height: 100%
-	padding-bottom: 40px
 .wrap
 	+container
 	transition: all 0.3s
@@ -76,10 +75,17 @@ body
 		text-align: center
 		border-radius: 6px
 		background-color: transparent
+		transition: all 0.3s
 		&_red
 			background-color: $red
+			&:hover
+				background-color: darken($red,5)
+				transition: all 0.3s
 		&_grey
 			background-color: #40403e
+			&:hover
+				background-color: darken(#40403e,10)
+				transition: all 0.3s
 	&-top
 		background-color: #40403e
 		+calibri
@@ -103,7 +109,7 @@ body
 				text-decoration: underline
 	&-mid
 		padding-top: 50px
-		padding-bottom: 50px
+		padding-bottom: 40px
 		+calibri-l
 		font-size: 16px
 		background-color: $light
@@ -128,7 +134,7 @@ body
 			text-decoration: underline
 .logo
 	position: relative
-	top: -5px
+	top: -10px
 	&__link
 		overflow: hidden
 		display: block
@@ -165,7 +171,7 @@ body
 			border-top: 1px dotted #009fe0
 	&__country
 		display: inline-block
-		padding: 2px 10px
+		padding: 1px 10px
 		background-color: $dark
 	.selectric
 		border: none
@@ -249,11 +255,56 @@ body
 	 Footer
 	 ========================================================================== */
 .footer
-	margin-top: -40px
-	height: 40px
+	padding-top: 25px
+	padding-bottom: 30px
+	+sans
+	line-height: 1
+	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
+	&__copyright
+		display: block
+		padding-top: 22px
+		vertical-align: middle
+	&__col
+		&:nth-child(1)
+			+span(5)
+		&:nth-child(2)
+			+span(3)
+		&:nth-child(3)
+			+span(4)
+.author
+	float: right
+	&__text
+		display: inline-block
+	&__link
+		margin-left: 5px
+		display: inline-block
+		vertical-align: 7px
+	&__logo
+		display: inline-block
+		vertical-align: middle
+.socials
+	margin-top: 13px
+	+pie-clearfix
+	&__item
+		float: left
+		& + &
+			margin-left: 10px
+		&:hover
+			.icon
+				fill: #e13534
+				transition: all 0.3s
+	&__link
+		display: block
+		width: 30px
+		height: 30px
+		.icon
+			transition: all 0.3s
+
 /* ==========================================================================
 	 Main
 	 ========================================================================== */
+.text-center
+	text-align: center
 .title
 	margin-bottom: 50px
 	+calibri-b
@@ -266,6 +317,14 @@ body
 	+span(full)
 	&__in
 		display: block
+.subtitle
+	+calibri-b
+	font-size: 26px
+	line-height: 30px
+	font-weight: normal
+	text-align: center
+	text-transform: uppercase
+	+span(full)
 .section
 	padding-top: 50px
 	padding-bottom: 50px
@@ -614,6 +673,7 @@ body
 			text-transform: uppercase
 			font-size: 36px
 			line-height: 1
+			font-weight: normal
 .section_6
 	padding-bottom: 10px
 	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
@@ -636,9 +696,20 @@ body
 		z-index: 1
 		text-align: center
 		+vertical
+		transition: all 0.3s
 		.icon
 			display: inline-block
 			vertical-align: middle
+		.icon-hover
+			display: none
+			vertical-align: middle
+		&:hover
+			background-color: rgba(52, 60, 68, .8)
+			transition: all 0.3s
+			.icon
+				display: none
+			.icon-hover
+				display: inline-block
 	&__img
 		width: 100%
 		height: auto
@@ -660,6 +731,266 @@ body
 		border-bottom: 1px dashed #e13534
 		background-color: transparent
 		text-transform: uppercase
+.section_7
+	background-color: $light
+.table-price
+	+span(full)
+	&__thead
+		+sans-b
+		color: #ffffff
+		font-size: 16px
+		line-height: 20px
+		border-radius: 6px 6px 0 0
+		background-image: linear-gradient(to bottom, #e94240, #e13534)
+		border-bottom: 2px solid #ca302f
+		.icon
+			display: inline-block
+			margin-right: 5px
+			vertical-align: 2px
+			transform: rotate(180deg)
+		.table-price__td
+			cursor: pointer
+			& + .table-price__td
+				border-left: 1px solid #ca302f
+			&.is-active
+				.icon
+					transform: rotate(0deg)
+	&__row
+		display: table
+		width: 100%
+		height: 70px
+	&__tbody
+		+sans
+		font-size: 16px
+		line-height: 20px
+		.table-price__td
+			& + .table-price__td
+				border-left: 1px solid #e9e9ea
+			&:first-child
+				padding-left: 30px
+		.table-price__row
+			&:nth-child(2n+1)
+				background-color: #f4f4f4
+			&:nth-child(2n)
+				background-color: #f9f9f9
+			& + .table-price__row
+				border-top: 1px solid #e9e9ea
+	&__td
+		display: table-cell
+		padding-left: 20px
+		padding-right: 20px
+		width: 60%
+		vertical-align: middle
+		& + &
+			width: 15%
+			text-align: center
+			& + &
+				width: 25%
+.section_8
+	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
+.slider
+	+span(full)
+	&__item
+		text-align: center
+	&__name
+		margin-top: 10px
+		+calibri-b
+		font-size: 18px
+		line-height: 20px
+	&__desc
+		margin-top: 10px
+		+sans
+		font-size: 14px
+		line-height: 20px
+	&.owl-carousel
+		.owl-item
+			img
+				display: inline-block
+				width: 85%
+		.owl-controls
+			padding-top: 50px
+			text-align: center
+		.owl-dot
+			position: relative
+			display: inline-block
+			margin-left: 4px
+			margin-right: 4px
+			width: 14px
+			height: 14px
+			border-radius: 50%
+			border: 3px solid #343c44
+			&.active
+				top: 3px
+				width: 20px
+				height: 20px
+				border: none
+				background-color: #e13534
+		.owl-prev
+			position: absolute
+			left: 0
+			top: 15%
+			width: 15px
+			height: 100px
+			transform: rotate(-180deg)
+			z-index: 1
+		.owl-next
+			position: absolute
+			right: 0
+			top: 15%
+			width: 15px
+			height: 100px
+			z-index: 1
+		.owl-prev,
+		.owl-next
+			&:hover
+				fill: #e13534
+.section_9
+	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
+	.title
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: -50px
+			left: 20%
+			right: 20%
+			height: 1px
+			background-color: rgba(0,0,0,.1)
+.faq
+	+span(full)
+	&__item
+		margin-bottom: 35px
+		& + &
+			border-top: 1px dashed #c5c5c5
+		&:first-child
+			.faq__question
+				&:first-child
+					margin-top: 0
+	&__question
+		margin-top: 35px
+		+pie-clearfix
+		&-icon
+			position: relative
+			top: 3px
+			min-width: 70px
+			float: left
+			padding: 1px 0 0
+			+sans-b
+			font-size: 14px
+			line-height: 18px
+			color: #ffffff
+			text-align: center
+			background-color: #e13534
+			border-radius: 4px 0 4px 4px
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				right: -4px
+				+arr(4,4,#e13534,tl)
+		&-text
+			overflow: hidden
+			+pre(1.25)
+			+sans
+			font-size: 18px
+			line-height: 20px
+		&_mod
+			+prefix(1)
+			.faq__question-icon
+				background-color: #94c400
+				border-radius: 0 4px 4px 4px
+				&:after
+					content: ''
+					left: -4px
+					right: auto
+					+arr(4,4,#94c400,tr)
+.more-btn
+	display: inline-block
+	margin-top: 20px
+	+calibri-b
+	font-size: 26px
+	color: #e13534
+	line-height: 20px
+	border-bottom: 1px dashed #eea9a9
+	text-transform: uppercase
+	background-color: transparent
+.section_10
+	background-color: $light
+	.title
+		margin-bottom: 0
+		color: #e13534
+.contacts
+	margin-top: 30px
+	+pie-clearfix
+	&__link
+		display: block
+		+pie-clearfix
+	&__item
+		padding-top: 20px
+		padding-bottom: 20px
+		+pie-clearfix
+		&:nth-child(3n+1)
+			+span(4.15)
+		&:nth-child(3n+2)
+			+span(3.75)
+		&:nth-child(3n+3)
+			+span(4.1)
+		&:nth-child(1)
+			.contacts__text-in
+				border-bottom: 1px dashed #b7babc
+		&:nth-child(2)
+			.contacts__text-in
+				border-bottom: 1px dashed #b7babc
+		&:nth-child(5)
+			.contacts__text-in
+				border-bottom: 1px dashed #b7babc
+		&:nth-child(3)
+			.contacts__link
+				cursor: default
+			&:hover
+				.contacts__text-in
+					border: none
+			& ~ .contacts__item
+				.contacts__text
+					&:before
+						content: ''
+						position: absolute
+						top: -20px
+						left: 50px
+						right: 15px
+						height: 1px
+						border-top: 1px dashed #b7babc
+		&:nth-child(4)
+			padding-right: 0
+			&:hover
+				.contacts__text-in
+					border: none
+			.contacts__link
+				cursor: default
+			.contacts__text
+				padding-top: 0
+		&:hover
+			color: #e13534
+			.icon
+				display: none
+				&_hover
+					display: block
+			.contacts__text-in
+				border-bottom: 1px dashed #e13534
+		.icon
+			float: left
+			margin-right: 15px
+			&_hover
+				display: none
+	&__text
+		position: relative
+		display: block
+		padding-top: 7px
+		+calibri-b
+		font-size: 18px
+		&-in
+			display: inline-block
+			line-height: 1
 
 /* ==========================================================================
 	 Other Styles
