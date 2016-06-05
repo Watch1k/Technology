@@ -208,7 +208,7 @@ body
 	&__phone
 		display: inline-block
 		margin-bottom: 9px
-		font-size: 22px
+		font-size: 24px
 		color: lighten($dark,30)
 	&__mail
 		position: relative
@@ -373,6 +373,7 @@ body
 		p
 			color: #343c44
 .selection
+	margin-top: 10px
 	+pie-clearfix
 	&__desc
 		margin-top: 15px
@@ -471,6 +472,7 @@ body
 		font-size: 22px
 		+text-shadow
 .section_3
+	padding-bottom: 10px
 	position: relative
 	background-color: $light
 	&:before
@@ -569,8 +571,95 @@ body
 					height: 300px
 					width: 5px
 					background: url('../img/backgrounds/bg-3.png') center center repeat
-
-
+.section_4
+	padding-bottom: 15px
+	position: relative
+	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
+	.title
+		margin-bottom: 50px
+.services
+	+pie-clearfix
+	&__item
+		margin-bottom: 30px
+		+span(6)
+	&__img
+		float: left
+		margin-right: 15px
+		width: 107px
+		height: 116px
+		background: url('../img/backgrounds/hex-2.png') center center no-repeat
+		text-align: center
+		+vertical
+		.icon
+			display: inline-block
+			vertical-align: middle
+	&__content
+		padding-top: 25px
+		overflow: hidden
+		font-size: 16px
+		line-height: 20px
+	&__text
+		+sans-b
+		&_mod
+			+sans
+.section_5
+	background: $light url('../img/backgrounds/bg-2.png') 0 0 no-repeat
+	background-size: auto 100%
+	.form-wrap
+		background: none
+	.form
+		padding-top: 0
+		padding-bottom: 0
+		&-title
+			text-transform: uppercase
+			font-size: 36px
+			line-height: 1
+.section_6
+	padding-bottom: 10px
+	background: url('../img/backgrounds/bg-3.png') 0 0 repeat
+.objects
+	+pie-clearfix
+	&__item
+		margin-bottom: 50px
+		+span(4)
+	&__el
+		position: relative
+		overflow: hidden
+		display: block
+		border-radius: 10px
+	&__overlay
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+		text-align: center
+		+vertical
+		.icon
+			display: inline-block
+			vertical-align: middle
+	&__img
+		width: 100%
+		height: auto
+		vertical-align: bottom
+	&__desc
+		margin-top: 20px
+		margin-bottom: 20px
+		+calibri-b
+		font-size: 18px
+		line-height: 20px
+	.row
+		text-align: center
+	&__comment
+		display: inline-block
+		+calibri-b
+		font-size: 18px
+		color: #e13534
+		line-height: 1
+		border-bottom: 1px dashed #e13534
+		background-color: transparent
+		text-transform: uppercase
 
 /* ==========================================================================
 	 Other Styles

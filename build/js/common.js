@@ -15,4 +15,12 @@ $(document).ready(function(){
 
 	$('.location__select').selectric();
 
+	$('.objects__el').fancybox({
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
+
 });
